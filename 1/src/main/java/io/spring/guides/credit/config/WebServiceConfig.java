@@ -1,4 +1,4 @@
-package io.spring.guides.gs_producing_web_service.config;
+package io.spring.guides.credit.config;//package io.spring.guides.gs_producing_web_service.config;
 
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.ApplicationContext;
@@ -27,16 +27,16 @@ public class WebServiceConfig extends WsConfigurerAdapter {
     public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema countriesSchema) {
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
 //        wsdl11Definition.setPortTypeName("CountriesPort");
-        wsdl11Definition.setPortTypeName("OrdersPort");
+        wsdl11Definition.setPortTypeName("CreditsPort");
 
         wsdl11Definition.setLocationUri("/ws");
-        wsdl11Definition.setTargetNamespace("http://spring.io/guides/gs-producing-web-service");
+        wsdl11Definition.setTargetNamespace("http://spring.io/guides/credit");
         wsdl11Definition.setSchema(countriesSchema);
         return wsdl11Definition;
     }
 
     @Bean
     public XsdSchema countriesSchema() {
-        return new SimpleXsdSchema(new ClassPathResource("order.xsd"));
+        return new SimpleXsdSchema(new ClassPathResource("credit.xsd"));
     }
 }
