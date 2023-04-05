@@ -1,0 +1,28 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://spring.io/guides/product-inventory"
+           targetNamespace="http://spring.io/guides/product-inventory" elementFormDefault="qualified">
+
+    <xs:element name="getProductRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nameProduct" type="xs:string"/>
+                <xs:element name="quantity" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getProductResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="status" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="Product">
+        <xs:sequence>
+            <xs:element name="nameProduct" type="xs:string"/>
+            <xs:element name="quantity" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
