@@ -4,6 +4,7 @@ import io.spring.guides.credit.GetCreditRequest;
 import io.spring.guides.credit.GetCreditResponse;
 import io.spring.guides.credit.repository.CreditRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
